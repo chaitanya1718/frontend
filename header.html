@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>header-footer-main-layout</title>
+        <style>
+            .container{
+                display:grid;
+                background-color:aliceblue;
+                grid-template-rows: auto 1fr auto;
+                grid-template-columns: 100px 100px;
+                grid-template-areas: "header header"
+                "sidebar main"
+                "footer footer";
+
+                height:100vh;
+                gap:10px;                
+            }
+            .header{
+                display: flex;
+                background-color: aqua;
+                grid-area: header;
+                color:navy;
+                justify-content:center;
+                align-items:center;
+                width:1000px;
+
+            }
+            .main{
+                display:flex;
+                background-color:antiquewhite;
+                grid-area: main;
+                color:black;
+                justify-content:center;
+                align-items:center;
+                width:1000px;
+
+            }
+            
+            .sidebar{
+                display: flex;
+                color:antiquewhite;
+                grid-area: sidebar;
+                background-color: black;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer{
+                display:flex;
+                background-color:blanchedalmond;
+                color:navy;
+                justify-content:center;
+                align-items:center;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">Header</div>
+            <div class="sidebar">sidebar</div>
+            <div class="main">Main</div>
+            <div class="footer">Footer</div>
+        </div>
+
+    </body>
+</html>
